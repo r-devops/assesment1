@@ -23,7 +23,7 @@ module "minikube" {
   cluster_name  = "minikube"
   aws_instance_type = "t3.large"
   ssh_public_key = "~/.ssh/id_rsa.pub"
-  aws_subnet_id = module.vpc.private_subnets[0]
+  aws_subnet_id = module.vpc.public_subnets[0]
   hosted_zone = "rdevopsb73.online"
   hosted_zone_private = false
 
